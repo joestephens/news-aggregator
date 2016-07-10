@@ -1,0 +1,18 @@
+{
+  "name": "news-aggregator",
+  "version": "1.0.0",
+  "description": "Test-driven Javascript News Aggregator",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Joe Stephens",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "http-server": "^0.9.0",
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.4",
+    "zombie": "^4.2.1"
+  }
+}
