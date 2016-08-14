@@ -1,4 +1,4 @@
-var server = require('http-server').createServer();
+penvar server = require('http-server').createServer();
 var Browser = require('zombie');
 var assert = require('chai').assert;
 

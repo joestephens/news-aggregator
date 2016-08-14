@@ -13,8 +13,10 @@
     },
 
     getJSON: function() {
-      this._ajaxRequest(this.url, function(response) {
-        console.log(response)
+      this._ajaxRequest(this.url, function(json) {
+        json.response.results.map(function(object) {
+          this.outputStory(object.webTitle, object.webUrl)
+        });
       });
     },
 
@@ -25,7 +27,8 @@
 
       request.onreadystatechange = function(response) {
         if(request.readyState === 4 && request.status === 200) {
-          callback(request.responseText);
+          var myJSON = JSON.parse(request.responseText);
+          callback(myJSON);
         }
       }
 
